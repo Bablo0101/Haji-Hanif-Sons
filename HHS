@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haji Hanif & Sons - Office Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="logo" id="logoText">Haji Hanif & Sons</div>
+      <nav id="navSections">
+        <!-- Sections dynamically added here -->
+      </nav>
+      <button id="logoutBtn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1 id="pageTitle">Login</h1>
+      </header>
+
+      <section id="loginSection" class="section active">
+        <form id="loginForm">
+          <label for="cnicInput">Enter CNIC (Login ID):</label>
+          <input type="text" id="cnicInput" placeholder="XXXXX-XXXXXXX-X" required />
+          <button type="submit">Login</button>
+        </form>
+      </section>
+
+      <section id="dashboardSection" class="section">
+        <div class="welcome-msg" id="welcomeMsg"></div>
+
+        <div id="contentArea">
+          <!-- Dynamic content for each section -->
+        </div>
+      </section>
+
+      <section id="adminSettingsSection" class="section">
+        <h2>Super Admin Settings</h2>
+        <label for="companyNameInput">Change Company Name:</label>
+        <input type="text" id="companyNameInput" />
+        <button id="saveCompanyNameBtn">Save</button>
+
+        <label for="logoTextInput">Change Logo Text:</label>
+        <input type="text" id="logoTextInput" />
+        <button id="saveLogoBtn">Save</button>
+
+        <h3>Manage Sections</h3>
+        <input type="text" id="newSectionInput" placeholder="New Section Name" />
+        <button id="addSectionBtn">Add Section</button>
+
+        <ul id="sectionsList">
+          <!-- List of sections with delete option -->
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
